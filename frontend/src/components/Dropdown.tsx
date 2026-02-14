@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledBox = styled(Box)`
   display: flex;
-  width: 10%;
+  min-width: 7rem;
   padding: 0.5rem;
   justify-content: center;
   gap: 0.5rem;

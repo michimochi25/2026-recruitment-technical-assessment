@@ -1,3 +1,4 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import styled from "styled-components";
 
 const StyledInput = styled("input")`
@@ -26,8 +27,11 @@ const SearchBar = ({
   searchTerm: string;
   setSearchTerm: (term: string) => void;
 }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <div className="relative w-1/2">
+    <div className={`relative w-1/2 ${isMobile ? "w-full" : ""}`}>
       <span className="material-icons-round absolute left-2 top-1/2 -translate-y-1/2">
         search
       </span>

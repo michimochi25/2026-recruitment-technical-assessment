@@ -1,21 +1,28 @@
 import { FreeroomsDoor } from "./FreeroomsDoor";
 import { Menu } from "./Menu";
 import { useState } from "react";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 const Navbar = () => {
   const [selectedMenu, setSelectedMenu] = useState("grid");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className="w-full flex shadow-sm p-2 justify-between items-center">
       {/* Logo */}
       <div className="flex">
         <FreeroomsDoor />
-        <h1
-          className="ml-2 my-auto text-4xl text-[var(--freerooms-primary)] 
+        {isMobile ? (
+          <></>
+        ) : (
+          <h1
+            className="ml-2 my-auto text-4xl text-[var(--freerooms-primary)] 
           font-(family-name:--font-head) font-medium"
-        >
-          Freerooms
-        </h1>
+          >
+            Freerooms
+          </h1>
+        )}
       </div>
 
       {/* Menus */}
