@@ -19,7 +19,7 @@ function App() {
       <main className="mt-5 mx-4">
         {/* Filters and Search */}
         {isMobile ? (
-          <section className="flex flex-col">
+          <section className="flex flex-col fixed top-16 left-0 right-0 bg-white p-4 z-10">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <div className="flex justify-between mt-3">
               <Dropdown icon="filter_alt" text="Filters" />
@@ -27,7 +27,7 @@ function App() {
             </div>
           </section>
         ) : (
-          <section className="flex justify-between">
+          <section className="flex justify-between fixed top-16 left-0 right-0 bg-white p-4 z-10">
             <Dropdown icon="filter_alt" text="Filters" />
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Dropdown icon="filter_list" text="Sort" />
@@ -35,7 +35,7 @@ function App() {
         )}
 
         {/* Rooms */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-4">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-16">
           {rooms.map((room) => (
             <>
               {isMobile ? (
