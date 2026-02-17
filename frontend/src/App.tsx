@@ -21,7 +21,7 @@ function App() {
         {isMobile ? (
           <section className="flex flex-col">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-            <div className="flex justify-between mt-2">
+            <div className="flex justify-between mt-3">
               <Dropdown icon="filter_alt" text="Filters" />
               <Dropdown icon="filter_list" text="Sort" />
             </div>

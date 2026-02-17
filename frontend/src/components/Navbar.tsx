@@ -9,7 +9,7 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div className="w-full flex shadow-sm p-2 justify-between items-center">
+    <div className="w-full flex shadow-sm p-2 justify-between items-center fixed sticky top-0 z-10 bg-white">
       {/* Logo */}
       <div className="flex">
         <FreeroomsDoor />
